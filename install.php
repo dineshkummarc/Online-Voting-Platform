@@ -19,11 +19,11 @@ require_once('folder/functions/functions.php');
 
 	// Check for PHP Version, MySQLi & other Core Functions
 	// if (version_compare(PHP_VERSION, '5.6.0', '<=')) {
-	if (version_compare(PHP_VERSION, '8.0', '<=')) {
+	if (version_compare(PHP_VERSION, '7.4.33', '<=')) {
 		$phpversion = PHP_VERSION;
 		$phpcheck = '<i class="fa fa-check text-default"></i> PASS';
 	} else {
-		$phpversion = 'You need to have PHP Version 5.6 and Lower to Install this system.';
+		$phpversion = 'You need to have PHP Version ~5.6~ 7.4.33 and Lower to Install this system.';
 		$phpcheck = '<i class="fa fa-times text-danger"></i> FAIL';
 		$canInstall = 'false';
 		$svrErr	= 'true';
