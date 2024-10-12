@@ -100,9 +100,10 @@ require_once('folder/functions/functions.php');
 			empty($site_email) or 
 			empty($site_password) or 
 			empty($admin_email) or 
-			empty($admin_password)) { echo error("Error! All fields are required."); }
+// 			empty($admin_password)) { echo error("Error! All fields are required."); }
+			empty($admin_password)) { // echo "Error! All fields are required.";
+			}
 			else {
-				
 				
 		$db = Database::GetInstance($_POST['mysql_host'], $_POST['mysql_database'], $_POST['mysql_username'], $_POST['mysql_password'], DATABASE_TYPE);
 		if (DATABASE_CREATE && !$db->Create()) {
@@ -155,7 +156,8 @@ $dbh = DB::getInstance($_POST['mysql_host'], $_POST['mysql_database'], $_POST['m
 
 
 					} else {
-						echo error("Error! MySQL database not exists.");
+						// echo error("Error! MySQL database not exists.");
+						echo "Error! MySQL database not exists.";
 					}
 
 				} 
@@ -268,12 +270,12 @@ $dbh = DB::getInstance($_POST['mysql_host'], $_POST['mysql_database'], $_POST['m
 		           <span class="label label-info"><?php echo $mysqli; ?></span>
 		          </div>
 			    </div>  
-			    <div class="list-group-item text-muted">
-			     Mysql Extension
+			  <!--  <div class="list-group-item text-muted">
+			      Mysql Extension
 		          <div class="pull-right">
 		           <span class="label label-info"><?php echo $mysql; ?></span>
 		          </div>	
-			    </div>
+			    </div>   -->
 			    <div class="list-group-item text-muted">
 			      CURL Extension	
 		          <div class="pull-right">
