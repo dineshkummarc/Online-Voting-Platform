@@ -6,8 +6,6 @@ error_reporting(E_ALL);
  
 ob_start();
 
-
-
 //Check if init.php exists
 require_once("folder/settings.php");      
 require_once('folder/functions/database.php'); 
@@ -20,7 +18,8 @@ require_once('folder/functions/functions.php');
 	$folderErr = 'false';
 
 	// Check for PHP Version, MySQLi & other Core Functions
-	if (version_compare(PHP_VERSION, '5.6.0', '<=')) {
+	// if (version_compare(PHP_VERSION, '5.6.0', '<=')) {
+	if (version_compare(PHP_VERSION, '8.0', '<=')) {
 		$phpversion = PHP_VERSION;
 		$phpcheck = '<i class="fa fa-check text-default"></i> PASS';
 	} else {
