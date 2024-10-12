@@ -1,7 +1,7 @@
 <?php
 ob_start();
-if(file_exists("./install.php")) {
-	header("Location: ./install.php");
+if(file_exists("install.php")) {
+	header("Location: install.php");
 }
 
 $source_dir_user = 'source/user/';
